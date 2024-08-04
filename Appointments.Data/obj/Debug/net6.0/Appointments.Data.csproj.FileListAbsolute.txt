@@ -1,0 +1,12 @@
+E:\AppointmentsManagerApp.API\AppointmentsManager\Appointments.Data\bin\Debug\net6.0\Appointments.Data.deps.json
+E:\AppointmentsManagerApp.API\AppointmentsManager\Appointments.Data\bin\Debug\net6.0\Appointments.Data.dll
+E:\AppointmentsManagerApp.API\AppointmentsManager\Appointments.Data\bin\Debug\net6.0\Appointments.Data.pdb
+E:\AppointmentsManagerApp.API\AppointmentsManager\Appointments.Data\obj\Debug\net6.0\Appointments.Data.csproj.AssemblyReference.cache
+E:\AppointmentsManagerApp.API\AppointmentsManager\Appointments.Data\obj\Debug\net6.0\Appointments.Data.GeneratedMSBuildEditorConfig.editorconfig
+E:\AppointmentsManagerApp.API\AppointmentsManager\Appointments.Data\obj\Debug\net6.0\Appointments.Data.AssemblyInfoInputs.cache
+E:\AppointmentsManagerApp.API\AppointmentsManager\Appointments.Data\obj\Debug\net6.0\Appointments.Data.AssemblyInfo.cs
+E:\AppointmentsManagerApp.API\AppointmentsManager\Appointments.Data\obj\Debug\net6.0\Appointments.Data.csproj.CoreCompileInputs.cache
+E:\AppointmentsManagerApp.API\AppointmentsManager\Appointments.Data\obj\Debug\net6.0\Appointments.Data.dll
+E:\AppointmentsManagerApp.API\AppointmentsManager\Appointments.Data\obj\Debug\net6.0\refint\Appointments.Data.dll
+E:\AppointmentsManagerApp.API\AppointmentsManager\Appointments.Data\obj\Debug\net6.0\Appointments.Data.pdb
+E:\AppointmentsManagerApp.API\AppointmentsManager\Appointments.Data\obj\Debug\net6.0\ref\Appointments.Data.dll
