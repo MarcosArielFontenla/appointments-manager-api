@@ -13,6 +13,8 @@ builder.Services.AddSingleton<ConnectionProvider>(sp =>
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IClientRepository, ClientRepository>();
+builder.Services.AddScoped<IClientService, ClientService>();
 builder.Services.AddScoped<IServiceTypesRepository, ServiceTypesRepository>();
 builder.Services.AddScoped<IServiceTypesService, ServiceTypesService>();
 

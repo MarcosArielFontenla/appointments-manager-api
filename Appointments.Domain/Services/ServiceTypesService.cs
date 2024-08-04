@@ -17,7 +17,7 @@ namespace Appointments.Domain.Services
             _serviceTypesRepository = serviceTypesRepository ?? throw new ArgumentNullException(nameof(serviceTypesRepository));
         }
 
-        public async Task<IEnumerable<ServiceTypeDTO>> GetServiceTypesAsync()
+        public async Task<IEnumerable<ServiceTypeResponse>> GetServiceTypesAsync()
         {
             _logger.LogInformation("Starting call repository to getting all service types");
             var response = await _serviceTypesRepository.GetServiceTypes().ConfigureAwait(false);
@@ -25,7 +25,7 @@ namespace Appointments.Domain.Services
             if (response is null)
             {
                 _logger.LogError("No service types found");
-                return Enumerable.Empty<ServiceTypeDTO>();
+                return Enumerable.Empty<ServiceTypeResponse>();
             }
 
             var mappedResponse = response.Select(Mapper.MapToServiceTypeDTO);
@@ -33,17 +33,40 @@ namespace Appointments.Domain.Services
             return mappedResponse;
         }
 
-        public Task<ServiceTypeDTO> GetServiceTypeByIdAsync(int serviceTypeId)
+        public async Task<ServiceTypeResponse> GetServiceTypeByIdAsync(int serviceTypeId)
         {
-            throw new NotImplementedException();
+            _logger.LogInformation("Starting call repository to getting service type by id");
+            var response = await _serviceTypesRepository.GetServiceTypeById(serviceTypeId).ConfigureAwait(false);
+
+            if (response is null)
+            {
+                _logger.LogError("No service type found");
+                return null;
+            }
+
+            var mappedResponse = Mapper.MapToServiceTypeDTO(response);
+            _logger.LogInformation("Service type found successfully");
+            return mappedResponse;
         }
 
-        public Task<ServiceTypeDTO> AddServiceTypeAsync(ServiceTypeDTO serviceType)
+        public async Task<ServiceTypeResponse> AddServiceTypeAsync(ServiceTypeResponse serviceType)
         {
-            throw new NotImplementedException();
+            _logger.LogInformation("Starting call repository to add service type");
+            var mappedServiceType = Mapper.MapServiceTypesResponseToServiceType(serviceType);
+            var response = await _serviceTypesRepository.AddServiceType(mappedServiceType).ConfigureAwait(false);
+
+            if (response is null) 
+            {
+                _logger.LogError("Service type not added");
+                return null;
+            }
+            var mappedResponse = Mapper.MapToServiceTypeDTO(response);
+            _logger.LogInformation("Service type added successfully");
+            return mappedResponse;
+
         }
 
-        public Task<ServiceTypeDTO> UpdateServiceTypeAsync(ServiceTypeDTO serviceType, int serviceTypeId)
+        public Task<ServiceTypeResponse> UpdateServiceTypeAsync(ServiceTypeResponse serviceType, int serviceTypeId)
         {
             throw new NotImplementedException();
         }

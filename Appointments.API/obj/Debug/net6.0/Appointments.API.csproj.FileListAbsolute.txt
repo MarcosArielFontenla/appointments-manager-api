@@ -41,3 +41,4 @@ E:\AppointmentsManagerApp.API\AppointmentsManager\Appointments.API\bin\Debug\net
 E:\AppointmentsManagerApp.API\AppointmentsManager\Appointments.API\bin\Debug\net6.0\Appointments.Domain.dll
 E:\AppointmentsManagerApp.API\AppointmentsManager\Appointments.API\bin\Debug\net6.0\Appointments.Domain.pdb
 E:\AppointmentsManagerApp.API\AppointmentsManager\Appointments.API\bin\Debug\net6.0\Appointments.Data.pdb
+E:\AppointmentsManagerApp.API\AppointmentsManager\Appointments.API\obj\Debug\net6.0\Appointments.API.sourcelink.json

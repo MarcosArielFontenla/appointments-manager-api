@@ -20,12 +20,15 @@ namespace Appointments.API.Controllers
         /// <summary>
         /// Get All service types
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A list of service types</returns>
+        /// <response code="200">Returns the list of service types.</response>
+        /// <response code="404">If no service types are found.</response>
+        /// <response code="500">If an internal server error occurs.</response>
         [HttpGet]
-        [ProducesResponseType(typeof(IEnumerable<ServiceTypeDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(IEnumerable<ServiceTypeResponse>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<IEnumerable<ServiceTypeDTO>>> GetServiceTypesAsync()
+        public async Task<ActionResult<IEnumerable<ServiceTypeResponse>>> GetServiceTypes()
         {
             try
             {

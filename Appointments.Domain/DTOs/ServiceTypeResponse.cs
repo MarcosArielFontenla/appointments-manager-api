@@ -1,6 +1,6 @@
 ﻿namespace Appointments.Domain.DTOs
 {
-    public class ServiceTypeDTO
+    public class ServiceTypeResponse
     {
         public int ServiceTypeId { get; set; }
         public string Name { get; set; } = string.Empty;

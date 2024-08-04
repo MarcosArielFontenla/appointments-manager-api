@@ -10,3 +10,4 @@ E:\AppointmentsManagerApp.API\AppointmentsManager\Appointments.Data\obj\Debug\ne
 E:\AppointmentsManagerApp.API\AppointmentsManager\Appointments.Data\obj\Debug\net6.0\refint\Appointments.Data.dll
 E:\AppointmentsManagerApp.API\AppointmentsManager\Appointments.Data\obj\Debug\net6.0\Appointments.Data.pdb
 E:\AppointmentsManagerApp.API\AppointmentsManager\Appointments.Data\obj\Debug\net6.0\ref\Appointments.Data.dll
+E:\AppointmentsManagerApp.API\AppointmentsManager\Appointments.Data\obj\Debug\net6.0\Appointments.Data.sourcelink.json
