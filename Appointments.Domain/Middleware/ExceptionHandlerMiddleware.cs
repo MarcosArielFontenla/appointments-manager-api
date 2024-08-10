@@ -52,7 +52,7 @@ namespace Appointments.Domain.Middleware
             {
                 StatusCode = response.StatusCode,
                 Message = exception.Message,
-                Detail = exception.InnerException?.Message ?? string.Empty,
+                Detail = $"Error occurred during {context.Request.Method} on {context.Request.Path}. TraceId: {context.TraceIdentifier}",
                 Instance = context.Request.Path,
                 Type = exception.GetType().Name,
                 StackTrace = exception.StackTrace ?? string.Empty

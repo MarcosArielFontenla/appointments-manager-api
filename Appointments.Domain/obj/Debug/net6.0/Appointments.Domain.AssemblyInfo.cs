@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Appointments.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f706d8ae5232e20e90270c8b0a84de1adca0c1df")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ad63706510985af170eb0f8a7e4b90cfab7a066")]
 [assembly: System.Reflection.AssemblyProductAttribute("Appointments.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Appointments.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
