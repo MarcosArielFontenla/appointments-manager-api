@@ -32,23 +32,15 @@ namespace Appointments.API.Controllers
         {
             _logger.LogInformation("Starting call service to getting all clients");
 
-            try
-            {
-                var response = await _clientService.GetClientsAsync().ConfigureAwait(false);
+            var response = await _clientService.GetClientsAsync().ConfigureAwait(false);
 
-                if (response is null)
-                {
-                   _logger.LogError("No clients found");
-                    return NotFound("No clients found");
-                }
-                _logger.LogInformation("Clients found successfully");
-                return Ok(response);
-            }
-            catch (Exception ex)
+            if (response is null)
             {
-                _logger.LogError(ex, "An error occurred while getting clients");
-                throw;
+                _logger.LogError("No clients found");
+                throw new ArgumentNullException("No clients found");
             }
+            _logger.LogInformation("Clients found successfully");
+            return Ok(response);
         }
 
         /// <summary>
@@ -64,23 +56,15 @@ namespace Appointments.API.Controllers
         {
             _logger.LogInformation("Starting call service to getting client by id");
 
-            try
-            {
-                var response = await _clientService.GetClientByIdAsync(clientId).ConfigureAwait(false);
+            var response = await _clientService.GetClientByIdAsync(clientId).ConfigureAwait(false);
 
-                if (response is null)
-                {
-                    _logger.LogError("No client found");
-                    return NotFound("No client found");
-                }
-                _logger.LogInformation("Client found successfully");
-                return Ok(response);
-            }
-            catch (Exception ex)
+            if (response is null)
             {
-                _logger.LogError(ex, "An error occurred while getting client by id");
-                throw;
+                _logger.LogError("No client found");
+                throw new KeyNotFoundException($"No client found with id: {clientId}");
             }
+            _logger.LogInformation("Client found successfully");
+            return Ok(response);
         }
     }
 }

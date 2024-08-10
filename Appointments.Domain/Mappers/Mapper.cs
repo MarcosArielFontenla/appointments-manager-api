@@ -39,5 +39,18 @@ namespace Appointments.Domain.Mappers
                 StartDate = client.StartDate
             };
         }
+
+        public static Client MapClientResponseToClient(ClientResponse clientResponse)
+        {
+            return new Client
+            {
+                ClientId = clientResponse.ClientId,
+                Name = clientResponse.Name,
+                LastName = clientResponse.LastName,
+                Phone = clientResponse.Phone,
+                Email = clientResponse.Email,
+                StartDate = clientResponse.StartDate
+            };
+        }
     }
 }

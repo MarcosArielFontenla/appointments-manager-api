@@ -46,7 +46,7 @@ namespace Appointments.Data.Repositories
                 if (response is null)
                 {
                     _logger.LogError("No client found");
-                    return null;
+                    throw new KeyNotFoundException($"Client with id {clientId} not found.");
                 }
                 _logger.LogInformation("Client found successfully");
                 return response;

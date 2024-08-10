@@ -50,7 +50,17 @@ namespace Appointments.Domain.Services
 
         public async Task<ClientResponse> AddClientAsync(Client client)
         {
-            throw new NotImplementedException();
+            _logger.LogInformation("Starting call repository to add client");
+            var mappedToClient = _clientRepository.AddClient(client);
+
+            if (mappedToClient is null)
+            {
+                _logger.LogError("Client not added");
+                return null;
+            }
+            var mappedToResponse = Mapper.MapClientToClientResponse(await mappedToClient);
+            _logger.LogInformation("Client added successfully");
+            return mappedToResponse;
         }
 
         public async Task<ClientResponse> UpdateClientAsync(Client client, int clientId)

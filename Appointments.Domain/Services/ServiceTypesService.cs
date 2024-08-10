@@ -68,6 +68,7 @@ namespace Appointments.Domain.Services
 
         public Task<ServiceTypeResponse> UpdateServiceTypeAsync(ServiceTypeResponse serviceType, int serviceTypeId)
         {
+            _logger.LogInformation("Starting call repository to update service type");
             throw new NotImplementedException();
         }
 

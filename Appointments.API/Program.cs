@@ -1,6 +1,7 @@
 using Appointments.Data.DbConnection;
 using Appointments.Data.Repositories;
 using Appointments.Data.Repositories.Interfaces;
+using Appointments.Domain.Middleware;
 using Appointments.Domain.Services;
 using Appointments.Domain.Services.Interfaces;
 
@@ -27,5 +28,6 @@ if (app.Environment.IsDevelopment())
 }
 app.UseHttpsRedirection();
 app.UseAuthorization();
+app.UseMiddleware<ExceptionHandlerMiddleware>();
 app.MapControllers();
 app.Run();
